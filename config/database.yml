@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  #database: db/production.sqlite3 heroku用にこの1行をコメントアウトし下の3行を追加
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
