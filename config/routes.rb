@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+   post "fights/:post_id/create" => "fights#create"
+   post "fights/:post_id/destroy" => "fights#destroy"
+   post "goods/:post_id/create" => "goods#create"
+   post "goods/:post_id/destroy" => "goods#destroy"
    post "likes/:post_id/create" => "likes#create"
    post "likes/:post_id/destroy" => "likes#destroy"
 

@@ -21,8 +21,10 @@ class UsersController < ApplicationController
       name: params[:name],
       email: params[:email],
       image_name: "default_user.jpg",
-      password: params[:password]
+      password: params[:password],
+      profile: "よろしくお願いします"
     )
+
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "ユーザー登録が完了しました"
@@ -40,6 +42,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
+    @user.profile = params[:profile]
 
     if params[:image]
       @user.image_name = "#{@user.id}.jpg"

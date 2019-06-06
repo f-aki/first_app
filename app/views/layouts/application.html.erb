@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TweetApp</title>
+    <title>Cheer up!</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   </head>
 
   <body>
     <header>
       <div class="header-logo">
         <% if @current_user %>
-          <%= link_to("TweetApp", "/posts/index") %>
+          <%= link_to("Cheer up!", "/posts/index") %>
         <% else %>
-          <%= link_to("TweetApp", "/") %>
+          <%= link_to("Cheer up!", "/") %>
         <% end %>
       </div>
       <ul class="header-menus">
         <% if @current_user %>
           <li>
-            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            <%= link_to("ログイン中のユーザー：#{@current_user.name}", "/users/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to("投稿一覧", "/posts/index") %>
@@ -38,7 +38,7 @@
           </li>
         <% else %>
           <li>
-            <%= link_to("TweetAppとは", "/about") %>
+            <%= link_to("Cheer up!とは", "/about") %>
           </li>
           <li>
             <%= link_to("新規登録", "/signup") %>
