@@ -6,10 +6,13 @@ URL:https://cheer---up.herokuapp.com/
 初めての制作物として作ったアプリです。
 
 使用技術：Ruby on Railsを用いて作成。
+
 　　　　　GitとHerokuによりアップロード。
           
 以下を使うとサンプル用アカウントからログインできます。
+
 メールアドレス：sample
+
 パスワード：sample
 
 
