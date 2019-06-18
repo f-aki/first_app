@@ -8,6 +8,8 @@ URL:https://cheer---up.herokuapp.com/
 使用技術：Ruby on Railsを用いて作成。
 
 　　　　　GitとHerokuによりアップロード。
+     
+     
           
 以下を使うとサンプル用アカウントからログインできます。
 
