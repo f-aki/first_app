@@ -1,26 +1,15 @@
-# README
 
-https://user-images.githubusercontent.com/50855737/59662038-13f7f180-91e7-11e9-960f-5fa260432ffe.png
+URL:https://cheer---up.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![about](https://user-images.githubusercontent.com/50855737/59662038-13f7f180-91e7-11e9-960f-5fa260432ffe.png)
 
-Things you may want to cover:
+初めての制作物として作ったアプリです。
 
-* Ruby version
+使用技術：Ruby on Railsを用いて作成。
+　　　　　GitとHerokuによりアップロード。
+          
+以下を使うとサンプル用アカウントからログインできます。
+メールアドレス：sample
+パスワード：sample
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
