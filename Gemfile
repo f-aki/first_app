@@ -72,4 +72,3 @@ end
 
 #S3用に以下を追加
 gem "aws-sdk-s3", require: false
-gem 'carrierwave'
