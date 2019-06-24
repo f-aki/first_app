@@ -20,9 +20,10 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      image_name: "default_user.jpg",
+      #image_name: "default_user.jpg",
       password: params[:password],
-      profile: "よろしくお願いします"
+      profile: "よろしくお願いします",
+      image: "default_user.jpg"
     )
 
     if @user.save
@@ -45,9 +46,11 @@ class UsersController < ApplicationController
     @user.profile = params[:profile]
 
     if params[:image]
-      @user.image_name = "#{@user.id}.jpg"
-      image = params[:image]
-      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+      @user.image = params[:image]
+      #S3画像保存のためコメントアウト
+      #@user.image_name = "#{@user.id}.jpg"
+      #image = params[:image]
+      #File.binwrite("public/user_images/#{@user.image_name}", image.read)
     end
 
     if @user.save

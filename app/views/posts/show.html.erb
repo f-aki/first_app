@@ -2,7 +2,11 @@
   <div class="container">
     <div class="posts-show-item">
       <div class="post-user-name">
-        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <% if @user.image.attached? %>
+        <%= image_tag @user.image %>
+        <% else %>
+          <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <% end %>
         <%= link_to(@user.name, "/users/#{@user.id}") %>
       </div>
       <p>

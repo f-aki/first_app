@@ -1,7 +1,11 @@
 <div class="main user-show">
   <div class="container">
     <div class="user">
-      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <% if @user.image.attached? %>
+      <%= image_tag @user.image %>
+      <% else %>
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <% end %>
       <h2><%= @user.name %></h2>
       <p><%= @user.profile %></p>
       <% if @user.id == @current_user.id %>
@@ -20,7 +24,11 @@
 
       <div class="posts-index-item">
         <div class="post-left">
-          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+          <% if @user.image.attached? %>
+          <%= image_tag @user.image %>
+          <% else %>
+            <img src="<%= "/user_images/#{@user.image_name}" %>">
+          <% end %>
         </div>
         <div class="post-right">
           <div class="post-user-name">
