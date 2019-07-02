@@ -2,8 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 
-#S3用に下記を追加
-require 'devise'
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
