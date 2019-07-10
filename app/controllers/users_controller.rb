@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user, {only: [:edit, :update]}
 
   def index
-    @users = User.all
+    @users = User.all.order(created_at: :desc)
   end
 
   def show
@@ -20,10 +20,9 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      #image_name: "default_user.jpg",
       password: params[:password],
       profile: "よろしくお願いします",
-      image: "default_user.jpg"
+      image: nil
     )
 
     if @user.save
@@ -47,10 +46,6 @@ class UsersController < ApplicationController
 
     if params[:image]
       @user.image = params[:image]
-      #S3画像保存のためコメントアウト
-      #@user.image_name = "#{@user.id}.jpg"
-      #image = params[:image]
-      #File.binwrite("public/user_images/#{@user.image_name}", image.read)
     end
 
     if @user.save

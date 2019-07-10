@@ -42,7 +42,7 @@ gem 'bcrypt'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3' #heroku用にこの1文を追加
+  gem 'sqlite3' #heroku用に追加
 end
 
 group :development do
@@ -65,10 +65,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#heroku用に以下を追加
+#heroku用に追加
 group :production do
   gem 'pg'
 end
 
-#S3用に以下を追加
+#S3用に追加
 gem "aws-sdk-s3", require: false
+
+#バリデーションエラーメッセージの日本語化用に追加
+gem 'rails-i18n'
