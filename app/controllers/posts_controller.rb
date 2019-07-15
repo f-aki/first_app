@@ -9,9 +9,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @user = @post.user
-    @likes_count = Like.where(post_id: @post.id).count
     @fights_count = Fight.where(post_id: @post.id).count
     @goods_count = Good.where(post_id: @post.id).count
+    @likes_count = Like.where(post_id: @post.id).count
   end
 
   def new
